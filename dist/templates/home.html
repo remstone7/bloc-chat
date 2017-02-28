@@ -1,0 +1,22 @@
+<main>
+   <aside class="home-sidebar">
+
+            <h1>Bloc Chat</h1>
+            <button type="button" class="btn btn-default" 
+                    ng-click="open()">
+                    Create chat
+                </button>
+                
+        <ul>
+            <li class="home-chat-list" 
+            ng-repeat="room in rooms" >
+                {{ room.$value }} 
+            </li>
+        </ul>
+    </aside>
+    <section class="home-chatbox">
+       
+    </section>
+</main>
+
+
