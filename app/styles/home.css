@@ -32,3 +32,7 @@ Home Page
 ul {
     
 }
+
+.ion-android-close:hover {
+    color: red;
+}

@@ -9,8 +9,8 @@
                 
         <ul>
             <li class="home-chat-list" 
-            ng-repeat="room in rooms" >
-                {{ room.$value }} 
+            ng-repeat="room in rooms track by $index" >
+                {{ room.$value }} <span class="ion-android-close" ng-click="delete($index)"></span>
             </li>
         </ul>
     </aside>
