@@ -1,5 +1,5 @@
-<main>
-   <aside class="home-sidebar">
+<div class="row home-page">
+   <div class="home-sidebar col-xs-3">
 
             <h1>Bloc Chat</h1>
             <button type="button" class="btn btn-default" 
@@ -9,14 +9,19 @@
                 
         <ul>
             <li class="home-chat-list" 
-            ng-repeat="room in rooms track by $index" >
-                {{ room.$value }} <span class="ion-android-close" ng-click="delete($index)"></span>
+            ng-repeat="room in rooms track by $index">
+                <span ng-click="changeChat(room.$value)">{{ room.$value }}</span> <span class="ion-android-close" ng-click="delete($index)"></span>
             </li>
         </ul>
-    </aside>
-    <section class="home-chatbox">
-       
-    </section>
-</main>
+    </div>
+    <div class="home-chatbox col-xs-9" >
+       <h2>
+           {{ currentRoom }} 
+       </h2>
+       <p></p>
+        <p>{{ messages }}</p>
+    </div>
+</div>
+
 
 

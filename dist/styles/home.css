@@ -1,27 +1,27 @@
 /***********************
 Home Page
 ***********************/
+.home-page{
+    height: 100%;
+}
 .home-sidebar{
-    width: 20%;
     border-top: 1px solid #DEDEDE;
     padding:30px;
     background: grey;
     position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    height: 100%;
+    height: 100vh;
 }
 .home-sidebar h1{
     text-align: left;
     color: #4A4A4A;
     font-size: 2.2em;
+    display: inline-block;
 }
 
 
 .home-chatbox{
-    width: 80%;
-    background: red;
+    height: 100vh;
+    background: white;
     margin: 0 auto;
 }
 .home-chat-list {
@@ -35,4 +35,9 @@ ul {
 
 .ion-android-close:hover {
     color: red;
+}
+
+.home-sidebar .btn-default {
+    margin-left: 10px;
+    margin-bottom: 15px;
 }
