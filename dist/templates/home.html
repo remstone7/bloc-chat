@@ -9,19 +9,28 @@
                 
         <ul>
             <li class="home-chat-list" 
-            ng-repeat="room in rooms track by $index">
-                <span ng-click="changeChat(room.$value)">{{ room.$value }}</span> <span class="ion-android-close" ng-click="delete($index)"></span>
+            ng-repeat="room in rooms track by $index" ng-click="changeChat(room)">
+                <span >{{ room.$value }}</span> <span class="ion-android-close" ng-click="delete($index)"></span>
             </li>
         </ul>
     </div>
-    <div class="home-chatbox col-xs-9" >
+    
+    <div class="home-chatbox col-xs-9">
        <h2>
-           {{ currentRoom }} 
+           {{ currentRoom.$value }} 
        </h2>
-       <p></p>
-        <p>{{ messages }}</p>
+       <main ng-repeat="message in messages">
+           <table>
+               <tr>
+                  <th>
+                   <strong>{{message.username}}</strong>
+                </th>
+               </tr>
+               <tr>
+                   <td>{{message.content}}</td>
+               </tr>
+           </table>
+       </main>
     </div>
 </div>
-
-
 
