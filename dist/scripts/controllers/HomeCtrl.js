@@ -2,7 +2,7 @@
     function HomeCtrl($scope, Room, Message, $uibModal) {
         $scope.rooms = Room.all;
         $scope.currentRoom = null;
-        $scope.messages = Message.all;
+        $scope.messages = null;
 
         $scope.open = function() { 
             
