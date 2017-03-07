@@ -23,14 +23,19 @@
         $scope.changeChat = function(room){
             // store active room
             $scope.currentRoom = room;  
-            console.log($scope.currentRoom);
+//            console.log($scope.currentRoom);
             
             //display mesasges
             $scope.messages = Message.getByRoomId($scope.currentRoom.$id);
-            console.log($scope.messages);
+            console.log($scope.currentRoom.$id);
+//            console.log($scope.messages);
 
         };
         
+        $scope.sendMessage = function() {
+            $scope.messages = Message.send($scope.newMessage, $scope.currentRoom.$id);
+			     $scope.newMessage = '';
+		      } 
        
         
         return $scope.rooms

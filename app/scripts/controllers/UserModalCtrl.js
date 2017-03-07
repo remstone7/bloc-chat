@@ -1,11 +1,12 @@
 (function() {
     function UserModalCtrl($scope, $uibModalInstance, $cookies) {
+//        $cookies.blocChatCurrentUser = '';
         
         $scope.setUsername = function() {
-            $cookies.blocChatCurrentUser = $scope.newUsername;
+            $cookies.put('blocChatCurrentUser', $scope.newUsername);
               console.log($cookies.blocChatCurrentUser);
               
-            $uibModalInstance.close();
+            $uibModalInstance.close(); 
         };
     }
     
