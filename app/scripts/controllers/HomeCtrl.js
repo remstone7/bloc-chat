@@ -27,14 +27,14 @@
             
             //display mesasges
             $scope.messages = Message.getByRoomId($scope.currentRoom.$id);
-            console.log($scope.currentRoom.$id);
+            console.log($scope.currentRoom);
 //            console.log($scope.messages);
 
         };
         
-        $scope.sendMessage = function() {
-            $scope.messages = Message.send($scope.newMessage, $scope.currentRoom.$id);
-			     $scope.newMessage = '';
+        $scope.sendMessage = function(message) {
+            Message.send(message, $scope.currentRoom.$id);
+			      $scope.message = '';
 		      } 
        
         

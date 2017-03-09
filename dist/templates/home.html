@@ -1,5 +1,6 @@
 <div class="row home-page">
    <div class="home-sidebar col-xs-3">
+
             <h2>Bloc Chat</h2>
             <button type="button" class="btn btn-default" 
                     ng-click="open()">
@@ -18,18 +19,17 @@
        <h2>
            {{ currentRoom.$value }} 
        </h2>
-       <main ng-repeat="message in messages">
-           <table>
-               <tr>
-                  <th>
-                   <strong>{{message.username}}</strong>
-                </th>
-               </tr>
-               <tr>
+       <main>
+           <table class="table">
+               <tr ng-repeat="message in messages">
+                   <td><strong>{{message.username}}</strong></td>
                    <td>{{message.content}}</td>
                </tr>
            </table>
        </main>
+        <div class="message-input">
+           <input type="text" class="input-lg" placeholder="Enter message here" ng-model="message"><button class="btn btn-primary btn-lg message-btn" ng-click="sendMessage(message)">Send</button>
+       </div>
     </div>
 </div>
 

@@ -12,13 +12,13 @@
         return {
             all: messages,
             getByRoomId: getByRoomId,
-            send: function(newMessage, roomID) {
-				        var message = {
+            send: function(newMessage, roomId) {
+				        messages.$add({
                   username: $cookies.get('blocChatCurrentUser'),
                   content: newMessage,
-                  roomID: roomID,
+                  roomId: roomId,
                   sentAt: $filter('date')(new Date(), 'shortTime'),
-                }
+                });
 
                 return messages;
             },
